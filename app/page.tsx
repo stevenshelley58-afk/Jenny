@@ -1,4 +1,5 @@
 import EditorialCover from "@/components/home/EditorialCover";
+import CultureCalculator from "@/components/home/CultureCalculator";
 import CulturePace from "@/components/home/CulturePace";
 import ServicesBento from "@/components/home/ServicesBento";
 import PackageGrid from "@/components/home/PackageGrid";
@@ -13,6 +14,9 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-accent">
       <EditorialCover />
+      <section className="w-full flex justify-center py-12 px-6">
+        <CultureCalculator />
+      </section>
       <CulturePace />
       <ServicesBento />
       <PackageGrid />

@@ -3,16 +3,16 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, ArrowDown } from "lucide-react";
-import CultureCalculator from "./CultureCalculator";
+
 
 export default function EditorialCover() {
     const [isExpanded, setIsExpanded] = useState(false);
 
     return (
-        <section className="relative min-h-[90vh] flex flex-col justify-center px-6 md:px-12 lg:px-24 pt-24 pb-12 overflow-hidden">
+        <section className="relative min-h-[90vh] flex flex-col justify-center px-6 md:px-12 lg:px-24 pt-24 pb-12 overflow-hidden bg-primary text-white">
             <div className="absolute inset-0 z-0 opacity-10">
-                <div className="w-full h-full bg-gradient-to-br from-foreground to-foreground flex items-center justify-center border-2 border-dashed border-foreground/20">
-                    <p className="text-4xl font-serif text-foreground/40 rotate-12">
+                <div className="w-full h-full bg-gradient-to-br from-white to-white flex items-center justify-center border-2 border-dashed border-white/20">
+                    <p className="text-4xl font-serif text-white/40 rotate-12">
                         Hero Image: High-tech abstract visualization (Nano Banana style)
                     </p>
                 </div>
@@ -23,17 +23,17 @@ export default function EditorialCover() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                    className="text-5xl md:text-7xl lg:text-8xl font-serif font-medium text-foreground leading-[1.1] mb-8"
+                    className="text-5xl md:text-7xl lg:text-8xl font-serif font-medium text-white leading-[1.1] mb-8"
                 >
                     Be the boss <br />
-                    <span className="text-foreground">they brag about.</span>
+                    <span className="text-white">they brag about.</span>
                 </motion.h1>
 
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                    className="text-xl md:text-2xl text-foreground max-w-2xl leading-relaxed mb-12"
+                    className="text-xl md:text-2xl text-white/90 max-w-2xl leading-relaxed mb-12"
                 >
                     Build the team they won’t quit. At Ignite, we believe people are the spark behind every successful business.
                 </motion.p>
@@ -45,7 +45,7 @@ export default function EditorialCover() {
                 >
                     <button
                         onClick={() => setIsExpanded(!isExpanded)}
-                        className="group flex items-center gap-3 text-foreground hover:text-primary transition-colors"
+                        className="group flex items-center gap-3 text-white hover:text-accent transition-colors"
                     >
                         <span className="text-lg font-medium border-b border-current pb-0.5">
                             Why culture first?
@@ -62,7 +62,7 @@ export default function EditorialCover() {
                                 transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
                                 className="overflow-hidden"
                             >
-                                <div className="pt-8 max-w-2xl space-y-6 text-lg text-foreground/80 leading-relaxed">
+                                <div className="pt-8 max-w-2xl space-y-6 text-lg text-white/80 leading-relaxed">
                                     <p>
                                         When you want your culture to keep pace with your growth, you need more than just policies.
                                         You’ve built something great – a business with purpose, momentum, and people who care.
@@ -81,15 +81,13 @@ export default function EditorialCover() {
                 </motion.div>
             </div>
 
-            <div className="relative z-10 mt-16 w-full flex justify-center md:justify-start">
-                <CultureCalculator />
-            </div>
+
 
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1, duration: 1 }}
-                className="absolute bottom-12 left-6 md:left-12 flex items-center gap-4 text-foreground/60 text-sm uppercase tracking-widest"
+                className="absolute bottom-12 left-6 md:left-12 flex items-center gap-4 text-white/60 text-sm uppercase tracking-widest"
             >
                 <ArrowDown className="w-4 h-4 animate-bounce" />
                 See how we work with Perth leaders
