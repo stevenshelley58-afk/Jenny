@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowRight } from "lucide-react";
+import { HandArrow } from "@/components/ui/Handwritten";
 
 export default function FinalCTA() {
     return (
@@ -13,13 +14,16 @@ export default function FinalCTA() {
                     Let’s chat over coffee and discover how we can help you build a better business through your people.
                 </p>
 
-                <a
-                    href="/contact"
-                    className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white rounded-full text-lg font-medium hover:bg-primary/90 transition-colors mb-24"
-                >
-                    Book a Consultation
-                    <ArrowRight className="w-5 h-5" />
-                </a>
+                <div className="relative inline-block mb-24">
+                    <a
+                        href="/contact"
+                        className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white rounded-full text-lg font-medium hover:bg-primary/90 transition-colors relative z-10"
+                    >
+                        Book a Consultation
+                        <ArrowRight className="w-5 h-5" />
+                    </a>
+                    <HandArrow className="absolute -top-12 -right-24 w-24 h-24 text-white/30 rotate-12 hidden md:block" />
+                </div>
 
                 <div className="max-w-md mx-auto text-left">
                     <p className="text-sm font-medium text-background/60 uppercase tracking-widest mb-4">

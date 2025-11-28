@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { ReadingModeTrigger } from "@/components/providers/ReadingModeProvider";
 
 const steps = [
     {
@@ -56,18 +57,20 @@ function Step({ step, index }: { step: typeof steps[0]; index: number }) {
             style={{ opacity, scale }}
             className="max-w-4xl mx-auto text-center"
         >
-            <div className="inline-block px-4 py-1 rounded-full border border-primary/20 text-primary text-sm font-medium mb-6">
-                0{index + 1}
-            </div>
-            <h3 className="text-5xl md:text-7xl font-serif font-medium text-foreground mb-6">
-                {step.title}
-            </h3>
-            <p className="text-2xl md:text-3xl text-foreground mb-6">
-                {step.skim}
-            </p>
-            <p className="text-lg text-foreground max-w-2xl mx-auto leading-relaxed">
-                {step.depth}
-            </p>
+            <ReadingModeTrigger className="mx-auto">
+                <div className="inline-block px-4 py-1 rounded-full border border-primary/20 text-primary text-sm font-medium mb-6">
+                    0{index + 1}
+                </div>
+                <h3 className="text-5xl md:text-7xl font-serif font-medium text-foreground mb-6">
+                    {step.title}
+                </h3>
+                <p className="text-2xl md:text-3xl text-foreground mb-6">
+                    {step.skim}
+                </p>
+                <p className="text-lg text-foreground max-w-2xl mx-auto leading-relaxed">
+                    {step.depth}
+                </p>
+            </ReadingModeTrigger>
         </motion.div>
     );
 }

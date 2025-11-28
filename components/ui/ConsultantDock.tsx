@@ -6,13 +6,19 @@ import { Menu, MessageCircle, X } from "lucide-react";
 import Link from "next/link";
 import TalentWizard from "./TalentWizard";
 
+import { ReadingModeProvider, useReadingMode } from "@/components/providers/ReadingModeProvider";
+
 export default function ConsultantDock() {
     const [isWizardOpen, setIsWizardOpen] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { isReadingMode } = useReadingMode();
 
     return (
         <>
-            <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-40 flex items-center gap-2 p-2 bg-background/80 backdrop-blur-md border border-black/5 rounded-full shadow-2xl shadow-black/10">
+            <div
+                className={`fixed bottom-8 left-1/2 -translate-x-1/2 z-40 flex items-center gap-2 p-2 bg-background/80 backdrop-blur-md border border-black/5 rounded-full shadow-2xl shadow-black/10 transition-opacity duration-500 ${isReadingMode ? "opacity-0 pointer-events-none" : "opacity-100"
+                    }`}
+            >
                 <button
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                     className="p-3 rounded-full hover:bg-black/5 transition-colors relative group"

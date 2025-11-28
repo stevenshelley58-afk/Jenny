@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import TiltCard from "@/components/ui/TiltCard";
 
 const packages = [
     {
@@ -36,9 +37,9 @@ export default function PackageGrid() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {packages.map((pkg, index) => (
-                    <div
+                    <TiltCard
                         key={index}
-                        className="p-6 rounded-2xl border border-black/5 hover:border-primary/20 transition-colors bg-accent/30"
+                        className="p-6 rounded-2xl border border-black/5 hover:border-primary/20 transition-colors bg-accent/30 h-full"
                     >
                         <h3 className="text-2xl font-serif font-medium text-foreground mb-2">{pkg.title}</h3>
                         <p className="text-foreground mb-6 min-h-[3rem]">{pkg.tagline}</p>
@@ -70,7 +71,7 @@ export default function PackageGrid() {
                                 </motion.div>
                             )}
                         </AnimatePresence>
-                    </div>
+                    </TiltCard>
                 ))}
             </div>
         </section>

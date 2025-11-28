@@ -3,6 +3,8 @@ import { Inter, Newsreader } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/providers/SmoothScroll";
 import ConsultantDock from "@/components/ui/ConsultantDock";
+import AmbientCursor from "@/components/ui/AmbientCursor";
+import { ReadingModeProvider } from "@/components/providers/ReadingModeProvider";
 import { cn } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -26,8 +28,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={cn(inter.variable, newsreader.variable, "antialiased font-sans")}>
         <SmoothScroll>
-          {children}
-          <ConsultantDock />
+          <ReadingModeProvider>
+            <AmbientCursor />
+            {children}
+            <ConsultantDock />
+          </ReadingModeProvider>
         </SmoothScroll>
       </body>
     </html>

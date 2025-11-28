@@ -35,13 +35,19 @@ export default function TalentWizard({ isOpen, onClose }: TalentWizardProps) {
     const [currentStep, setCurrentStep] = useState(0);
     const [answers, setAnswers] = useState<Record<string, string>>({});
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleNext = (value: string) => {
         setAnswers((prev) => ({ ...prev, [steps[currentStep].id]: value }));
         if (currentStep < steps.length - 1) {
             setCurrentStep((prev) => prev + 1);
         } else {
-            setIsSubmitted(true);
+            setIsLoading(true);
+            // Simulate network request
+            setTimeout(() => {
+                setIsLoading(false);
+                setIsSubmitted(true);
+            }, 1500);
         }
     };
 
@@ -123,6 +129,11 @@ export default function TalentWizard({ isOpen, onClose }: TalentWizardProps) {
                                     </div>
                                 )}
                             </motion.div>
+                        ) : isLoading ? (
+                            <div className="flex flex-col items-center justify-center space-y-4">
+                                <div className="w-12 h-12 border-4 border-primary/30 border-t-primary rounded-full animate-spin" />
+                                <p className="text-lg text-foreground/60 animate-pulse">Analysing your needs...</p>
+                            </div>
                         ) : (
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.95 }}
