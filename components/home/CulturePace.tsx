@@ -39,17 +39,19 @@ export default function CulturePace() {
                     ))}
                 </div>
 
-                <button
-                    onClick={() => setIsStoryOpen(!isStoryOpen)}
-                    className="inline-flex items-center gap-2 px-6 py-3 border border-foreground/10 rounded-full hover:bg-accent transition-colors group"
-                >
-                    <span className="font-medium text-foreground">Our role beside you</span>
-                    {isStoryOpen ? (
-                        <Minus className="w-4 h-4 text-foreground" />
-                    ) : (
-                        <Plus className="w-4 h-4 text-foreground group-hover:rotate-90 transition-transform" />
-                    )}
-                </button>
+                <div className="flex justify-center">
+                    <button
+                        onClick={() => setIsStoryOpen(!isStoryOpen)}
+                        className="inline-flex items-center gap-2 px-6 py-3 border border-foreground/10 rounded-full hover:bg-accent transition-colors group"
+                    >
+                        <span className="font-medium text-foreground">Our role beside you</span>
+                        {isStoryOpen ? (
+                            <Minus className="w-4 h-4 text-foreground" />
+                        ) : (
+                            <Plus className="w-4 h-4 text-foreground group-hover:rotate-90 transition-transform" />
+                        )}
+                    </button>
+                </div>
 
                 <AnimatePresence>
                     {isStoryOpen && (
