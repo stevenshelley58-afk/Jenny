@@ -4,20 +4,21 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, ArrowDown } from "lucide-react";
 import CultureCalculator from "./CultureCalculator";
-import { HandUnderline } from "@/components/ui/Handwritten";
 
 export default function EditorialCover() {
     const [isExpanded, setIsExpanded] = useState(false);
 
     return (
-        <section className="relative min-h-[90vh] flex flex-col md:flex-row items-center justify-between px-6 md:px-12 lg:px-24 pt-24 pb-12 overflow-hidden gap-12">
-            <div className="absolute inset-0 z-0 opacity-10 md:opacity-100 md:relative md:w-1/2 md:flex md:items-center md:justify-center md:ml-auto">
-                <div className="w-full h-full flex items-center justify-center">
-                    <CultureCalculator />
+        <section className="relative min-h-[90vh] flex flex-col justify-center px-6 md:px-12 lg:px-24 pt-24 pb-12 overflow-hidden">
+            <div className="absolute inset-0 z-0 opacity-10">
+                <div className="w-full h-full bg-gradient-to-br from-foreground to-foreground flex items-center justify-center border-2 border-dashed border-foreground/20">
+                    <p className="text-4xl font-serif text-foreground/40 rotate-12">
+                        Hero Image: High-tech abstract visualization (Nano Banana style)
+                    </p>
                 </div>
             </div>
 
-            <div className="max-w-4xl z-10">
+            <div className="max-w-4xl z-10 relative">
                 <motion.h1
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -25,10 +26,7 @@ export default function EditorialCover() {
                     className="text-5xl md:text-7xl lg:text-8xl font-serif font-medium text-foreground leading-[1.1] mb-8"
                 >
                     Be the boss <br />
-                    <span className="relative inline-block">
-                        <span className="text-foreground relative z-10">they brag about.</span>
-                        <HandUnderline className="absolute -bottom-2 left-0 w-full text-primary/30 -rotate-1 z-0" />
-                    </span>
+                    <span className="text-foreground">they brag about.</span>
                 </motion.h1>
 
                 <motion.p
@@ -81,6 +79,10 @@ export default function EditorialCover() {
                         )}
                     </AnimatePresence>
                 </motion.div>
+            </div>
+
+            <div className="relative z-10 mt-16 w-full flex justify-center md:justify-start">
+                <CultureCalculator />
             </div>
 
             <motion.div

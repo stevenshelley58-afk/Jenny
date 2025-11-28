@@ -3,7 +3,6 @@ import { Inter, Newsreader } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/providers/SmoothScroll";
 import ConsultantDock from "@/components/ui/ConsultantDock";
-import AmbientCursor from "@/components/ui/AmbientCursor";
 import { ReadingModeProvider } from "@/components/providers/ReadingModeProvider";
 import { cn } from "@/lib/utils";
 
@@ -29,7 +28,6 @@ export default function RootLayout({
       <body className={cn(inter.variable, newsreader.variable, "antialiased font-sans")}>
         <SmoothScroll>
           <ReadingModeProvider>
-            <AmbientCursor />
             {children}
             <ConsultantDock />
           </ReadingModeProvider>
