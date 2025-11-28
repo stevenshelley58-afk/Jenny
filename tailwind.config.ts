@@ -8,13 +8,6 @@ const config: Config = {
     ],
     theme: {
         extend: {
-            colors: {
-                primary: "#274B77",
-                secondary: "#587490",
-                accent: "#F5F5F5",
-                foreground: "#000000",
-                background: "#FFFFFF",
-            },
             fontFamily: {
                 sans: ["var(--font-geist-sans)", "sans-serif"],
                 serif: ["var(--font-newsreader)", "serif"],
