@@ -29,7 +29,7 @@ export default function TeamStrip() {
     const [activeMember, setActiveMember] = useState<number | null>(null);
 
     return (
-        <section className="py-24 px-6 md:px-12 lg:px-24 bg-accent border-t border-black/5">
+        <section className="py-24 px-6 md:px-12 lg:px-24 bg-warm-paper border-t border-black/5">
             <div className="grid md:grid-cols-3 gap-8">
                 {team.map((member, index) => (
                     <div key={index} className="group">
@@ -71,7 +71,7 @@ export default function TeamStrip() {
                         >
                             <button
                                 onClick={() => setActiveMember(null)}
-                                className="absolute top-6 right-6 p-2 hover:bg-accent rounded-full transition-colors"
+                                className="absolute top-6 right-6 p-2 hover:bg-warm-paper rounded-full transition-colors"
                             >
                                 <X className="w-6 h-6 text-foreground" />
                             </button>
@@ -90,4 +90,5 @@ export default function TeamStrip() {
         </section>
     );
 }
+
 

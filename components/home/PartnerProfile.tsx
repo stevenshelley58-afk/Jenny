@@ -11,7 +11,7 @@ export default function PartnerProfile() {
     return (
         <section className="py-24 px-6 md:px-12 lg:px-24 bg-background">
             <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-                <div className="relative aspect-[4/5] bg-accent rounded-2xl overflow-hidden">
+                <div className="relative aspect-[4/5] bg-warm-paper rounded-2xl overflow-hidden">
                     {/* Placeholder for Jennie's image */}
                     <div className="absolute inset-0 flex items-center justify-center text-foreground/40 text-xl font-serif p-8 text-center border-2 border-dashed border-foreground/20 m-4 rounded-xl">
                         Portrait: Professional photo of Jennie Lamb
@@ -56,7 +56,7 @@ export default function PartnerProfile() {
                         >
                             <button
                                 onClick={() => setIsOpen(false)}
-                                className="absolute top-6 right-6 p-2 hover:bg-accent rounded-full transition-colors"
+                                className="absolute top-6 right-6 p-2 hover:bg-warm-paper rounded-full transition-colors"
                             >
                                 <X className="w-6 h-6 text-foreground" />
                             </button>
@@ -84,4 +84,5 @@ export default function PartnerProfile() {
         </section>
     );
 }
+
 

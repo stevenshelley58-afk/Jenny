@@ -5,7 +5,7 @@ import FinalCTA from "@/components/home/FinalCTA";
 
 export default function ServicesPage() {
     return (
-        <main className="min-h-screen bg-accent pt-24">
+        <main className="min-h-screen bg-warm-paper pt-24">
             <section className="px-6 md:px-12 lg:px-24 mb-12">
                 <h1 className="text-5xl md:text-7xl font-serif font-medium text-foreground mb-8">
                     Our Services
@@ -23,4 +23,5 @@ export default function ServicesPage() {
         </main>
     );
 }
+
 

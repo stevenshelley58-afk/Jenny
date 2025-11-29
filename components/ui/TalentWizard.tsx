@@ -66,7 +66,7 @@ export default function TalentWizard({ isOpen, onClose }: TalentWizardProps) {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: "100%" }}
                     transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                    className="fixed inset-0 z-50 flex items-center justify-center bg-accent/95 backdrop-blur-sm p-4"
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-warm-paper/95 backdrop-blur-sm p-4"
                 >
                     <button
                         onClick={reset}
@@ -163,4 +163,5 @@ export default function TalentWizard({ isOpen, onClose }: TalentWizardProps) {
         </AnimatePresence>
     );
 }
+
 

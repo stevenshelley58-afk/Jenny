@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function EditorialCover() {
     return (
-        <section className="relative min-h-[95vh] flex items-center bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-900 via-[#0f172a] to-[#020617] text-white overflow-hidden">
+        <section className="relative min-h-[95vh] flex items-center bg-gradient-to-bl from-blue-900 via-[#0f172a] to-[#020617] text-white overflow-hidden">
             {/* Ambient Background Effects */}
             <div className="absolute inset-0 z-0 pointer-events-none">
                 <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-blue-600/20 rounded-full blur-[120px] mix-blend-screen" />

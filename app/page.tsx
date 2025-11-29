@@ -12,7 +12,7 @@ import FinalCTA from "@/components/home/FinalCTA";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-accent">
+    <main className="min-h-screen bg-warm-paper">
       <EditorialCover />
       <section className="w-full flex justify-center py-12 px-6">
         <CultureCalculator />

@@ -66,7 +66,7 @@ export default function ConsultantDock() {
                                     key={item.href}
                                     href={item.href}
                                     onClick={() => setIsMenuOpen(false)}
-                                    className="px-4 py-3 hover:bg-accent rounded-xl text-foreground transition-colors text-sm font-medium"
+                                    className="px-4 py-3 hover:bg-warm-paper rounded-xl text-foreground transition-colors text-sm font-medium"
                                 >
                                     {item.label}
                                 </Link>
@@ -80,4 +80,5 @@ export default function ConsultantDock() {
         </>
     );
 }
+
 
