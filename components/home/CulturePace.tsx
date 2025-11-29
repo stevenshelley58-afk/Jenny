@@ -42,7 +42,7 @@ export default function CulturePace() {
                 <div className="flex justify-center">
                     <button
                         onClick={() => setIsStoryOpen(!isStoryOpen)}
-                        className="inline-flex items-center gap-2 px-6 py-3 border border-foreground/10 rounded-full hover:bg-warm-paper transition-colors group"
+                        className="inline-flex items-center gap-2 px-6 py-3 border border-foreground/10 rounded-full hover:bg-cream transition-colors group"
                     >
                         <span className="font-medium text-foreground">Our role beside you</span>
                         {isStoryOpen ? (
@@ -59,7 +59,7 @@ export default function CulturePace() {
                             initial={{ height: 0, opacity: 0, marginTop: 0 }}
                             animate={{ height: "auto", opacity: 1, marginTop: 32 }}
                             exit={{ height: 0, opacity: 0, marginTop: 0 }}
-                            className="overflow-hidden bg-warm-paper rounded-2xl"
+                            className="overflow-hidden bg-cream rounded-2xl"
                         >
                             <div className="p-8 md:p-12 space-y-6 text-lg text-foreground/80 leading-relaxed">
                                 <p>
@@ -79,5 +79,6 @@ export default function CulturePace() {
         </section>
     );
 }
+
 
 

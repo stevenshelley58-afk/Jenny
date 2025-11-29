@@ -4,7 +4,7 @@ import FinalCTA from "@/components/home/FinalCTA";
 
 export default function AboutPage() {
     return (
-        <main className="min-h-screen bg-warm-paper pt-24">
+        <main className="min-h-screen bg-cream pt-24">
             <section className="px-6 md:px-12 lg:px-24 mb-24">
                 <h1 className="text-5xl md:text-7xl font-serif font-medium text-foreground mb-12">
                     Fuelling growth.
@@ -38,5 +38,6 @@ export default function AboutPage() {
         </main>
     );
 }
+
 
 

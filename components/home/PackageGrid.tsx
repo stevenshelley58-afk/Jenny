@@ -39,7 +39,7 @@ export default function PackageGrid() {
                 {packages.map((pkg, index) => (
                     <TiltCard
                         key={index}
-                        className="p-6 rounded-2xl border border-black/5 hover:border-primary/20 transition-colors bg-warm-paper/30 h-full"
+                        className="p-6 rounded-2xl border border-black/5 hover:border-primary/20 transition-colors bg-cream/30 h-full"
                     >
                         <h3 className="text-2xl font-serif font-medium text-foreground mb-2">{pkg.title}</h3>
                         <p className="text-foreground mb-6 min-h-[3rem]">{pkg.tagline}</p>
@@ -77,5 +77,6 @@ export default function PackageGrid() {
         </section>
     );
 }
+
 
 

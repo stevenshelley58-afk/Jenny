@@ -65,7 +65,7 @@ export default function CaseStudyTimeline() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: index * 0.1 }}
-                        className="group relative bg-warm-paper/30 rounded-3xl p-8 border border-black/5 hover:border-primary/20 transition-all duration-300"
+                        className="group relative bg-cream/30 rounded-3xl p-8 border border-black/5 hover:border-primary/20 transition-all duration-300"
                     >
                         <div className="mb-8">
                             <h3 className="text-2xl font-serif font-medium text-foreground">
@@ -125,4 +125,5 @@ export default function CaseStudyTimeline() {
         </section>
     );
 }
+
 

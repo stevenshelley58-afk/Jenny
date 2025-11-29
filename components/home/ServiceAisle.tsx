@@ -42,7 +42,7 @@ export default function ServiceAisle() {
     const [activeService, setActiveService] = useState<number | null>(null);
 
     return (
-        <section className="py-24 overflow-hidden bg-warm-paper">
+        <section className="py-24 overflow-hidden bg-cream">
             <div className="px-6 md:px-12 lg:px-24 mb-12">
                 <h2 className="text-4xl md:text-5xl font-serif font-medium text-foreground">What we do</h2>
             </div>
@@ -91,7 +91,7 @@ export default function ServiceAisle() {
                         >
                             <button
                                 onClick={() => setActiveService(null)}
-                                className="absolute top-6 right-6 p-2 hover:bg-warm-paper rounded-full transition-colors"
+                                className="absolute top-6 right-6 p-2 hover:bg-cream rounded-full transition-colors"
                             >
                                 <X className="w-6 h-6 text-foreground" />
                             </button>
@@ -111,5 +111,6 @@ export default function ServiceAisle() {
         </section>
     );
 }
+
 
 

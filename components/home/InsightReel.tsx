@@ -27,7 +27,7 @@ const posts = [
 
 export default function InsightReel() {
     return (
-        <section className="py-24 px-6 md:px-12 lg:px-24 bg-warm-paper">
+        <section className="py-24 px-6 md:px-12 lg:px-24 bg-cream">
             <div className="flex items-end justify-between mb-16">
                 <h2 className="text-4xl md:text-5xl font-serif font-medium text-foreground">Journal</h2>
                 <Link href="/blog" className="hidden md:flex items-center gap-2 text-foreground hover:text-primary transition-colors">
@@ -83,5 +83,6 @@ export default function InsightReel() {
         </section>
     );
 }
+
 
 

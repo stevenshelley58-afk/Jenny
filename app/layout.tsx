@@ -1,21 +1,21 @@
 import type { Metadata } from "next";
-import { Inter, Newsreader } from "next/font/google";
+import { Instrument_Serif } from "next/font/google";
 import "./globals.css";
-import SmoothScroll from "@/components/providers/SmoothScroll";
-import ConsultantDock from "@/components/ui/ConsultantDock";
-import { ReadingModeProvider } from "@/components/providers/ReadingModeProvider";
 import { cn } from "@/lib/utils";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const newsreader = Newsreader({
+const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
-  variable: "--font-newsreader",
-  style: ["normal", "italic"]
+  weight: "400",
+  variable: "--font-instrument-serif",
 });
 
+// Using a local font or fallback for Satoshi since it's not on Google Fonts
+// For now, we'll inject the font via a link tag in the head or assume it's loaded via globals.css @import if we had the URL.
+// The user provided HTML had a link. We will add it to the head.
+
 export const metadata: Metadata = {
-  title: "Ignite PCG",
-  description: "HR Consulting in Perth",
+  title: "Ignite PCG | People. Culture. Growth.",
+  description: "Perth HR Consultants. We help leaders build businesses worth bragging about.",
 };
 
 export default function RootLayout({
@@ -24,14 +24,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={cn(inter.variable, newsreader.variable, "antialiased font-sans")}>
-        <SmoothScroll>
-          <ReadingModeProvider>
-            {children}
-            <ConsultantDock />
-          </ReadingModeProvider>
-        </SmoothScroll>
+    <html lang="en" className="scroll-smooth">
+      <head>
+        <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
+      </head>
+      <body className={cn(instrumentSerif.variable, "antialiased font-body bg-cream text-text")}>
+        {children}
       </body>
     </html>
   );

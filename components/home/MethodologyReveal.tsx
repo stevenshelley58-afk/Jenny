@@ -24,7 +24,7 @@ const steps = [
 
 export default function MethodologyReveal() {
     return (
-        <section className="py-24 bg-warm-paper">
+        <section className="py-24 bg-cream">
             <div className="px-6 md:px-12 lg:px-24 mb-16 text-center">
                 <p className="text-sm font-medium text-foreground uppercase tracking-widest mb-4">Our Approach</p>
                 <h2 className="text-3xl md:text-4xl font-serif font-medium text-foreground">
@@ -74,5 +74,6 @@ function Step({ step, index }: { step: typeof steps[0]; index: number }) {
         </motion.div>
     );
 }
+
 
 
